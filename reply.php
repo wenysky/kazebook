@@ -1,11 +1,13 @@
 <?php
-        session_start();
-        if(!isset ($_SESSION["login"]) || !isset($_SESSION["admin"])){
+        include 'include/pageauth.php';
+
+        if($isadmin != 1){
             session_destroy();
             echo '请登录管理员帐号进行回复';
             echo "<meta http-equiv=refresh content='2; url=login.php'>";
             exit;
         }
+
 	include 'include/db_class.php';
         include 'include/pagebase.php';
         $pagename = "回复留言";

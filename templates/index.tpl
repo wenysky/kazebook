@@ -6,7 +6,12 @@
                 <form action="post.php" method="post">
                     <ul>
                         <li>留言内容：<textarea id="content" name="content"></textarea></li>
-                        <li>昵&nbsp;&nbsp;&nbsp;称&nbsp;：<input type="text" id="username" name="username" value="游客" /><input type="submit" value="提交留言" /></li>
+                        <li>
+                        {if $uid<1}
+                            昵&nbsp;&nbsp;&nbsp;称&nbsp;：<input type="text" id="username" name="username" value="游客" />
+                        {/if}
+                            <input type="submit" value="提交留言" />
+                        </li>
                     </ul>
                 </form>
             <!---留言框结束--->
