@@ -1,6 +1,7 @@
 <?php
 	include 'include/db_class.php';
         include 'include/pagebase.php';
+        include 'include/pageauth.php';
         $pagename = "首页";
         $templatefile = "index.tpl";
 	
@@ -26,6 +27,8 @@
 	
 	$smarty->assign("postlist", $postlist);
         $smarty->assign("pagecount", $pagecount);
+        $smarty->assign("uid", $uid);
+        $smarty->assign("username", $username);
         $smarty->assign("pre", $pre);
         $smarty->assign("next", $next);
         include 'include/pagefooter.php';
