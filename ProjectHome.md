@@ -1,0 +1,1 @@
+a GuestBook writen by PHP
